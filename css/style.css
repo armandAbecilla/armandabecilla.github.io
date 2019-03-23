@@ -378,7 +378,7 @@ section#portfolio .container {
 
 section#portfolio h2 {
     color: #ded1c1;
-    display:inline;
+    display: inline-block;
     padding: 10px 15px;
     background-color: rgba(56,56,56, .56);
     -webkit-clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%);
@@ -592,7 +592,6 @@ section#copyright .social-icons i:hover {
         display: none;
     }
 }
-
 
 nav.mobile-nav .nav-overlay {
     overflow: hidden;
