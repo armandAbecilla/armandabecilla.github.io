@@ -87,29 +87,39 @@ section#hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    min-height: 640px;
+    min-height: 68vh;
 }
 
 section#hero .container {
     padding-top:40px;        
 }
 
+.site-name {
+    text-decoration: none;
+    color: #383838;
+    font-family: 'Merriweather', serif;
+    font-size:28px;
+    text-shadow: 0px 2px 1.98px rgba(40, 40, 40, 0.41);
+}
+
 @media only screen and (min-width: 768px){ 
+    
+    section#hero {
+        min-height: 640px;
+    }
+    
     .site-header {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
+    
+    .site-name { 
+        font-size:42px;
+    }
 }
 
-.site-name {
-    text-decoration: none;
-    color: #383838;
-    font-family: 'Merriweather', serif;
-    font-size:36px;
-    text-shadow: 0px 2px 1.98px rgba(40, 40, 40, 0.41);
-}
 
 .site-name span {
     color: #C1B283;
@@ -159,8 +169,14 @@ nav.site-nav ul .contact-me {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 100px;
     text-align: center;
+}
+
+@media only screen and (min-width: 768px){ 
+    .hero-content {
+        padding-top: 200px;
+    }    
 }
 
 .hero-content p {
@@ -198,6 +214,13 @@ section#about {
     text-align: center;    
 }
 
+
+.about-pic .about-img {
+    width: 100%;
+    border-radius: 100%;
+    border:1px solid #C1B283;
+}
+
 @media only screen and (min-width: 992px) {
     section#about .container {
         display: flex;
@@ -217,12 +240,10 @@ section#about {
         flex-direction: column;
         justify-content: center;
     }
-}
-
-
-.about-pic .about-img {
-    border-radius: 100%;
-    border:1px solid #C1B283;
+    
+    .about-pic .about-img { 
+        width:auto;
+    }
 }
 
 .about-content h2 {
@@ -295,6 +316,13 @@ section#skills .container {
 
 .skills-icons i {
     margin-right:20px;    
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 576px) {
+    .skills-icons i { 
+        margin-bottom: 0;
+    }
 }
 
 .skills-content .btn-primary {
@@ -416,9 +444,16 @@ section#quote p {
     font-style: italic;
     color: #b1b1b1;
     font-size: 18px;
-    text-align: right;
+    text-align: center;
     display: block;
-    margin-right:20%
+}
+
+@media only screen and (min-width: 576px) { 
+    section#quote p {
+        text-align: right;
+        display: block;
+        margin-right:20%;       
+    }
 }
 
 /*COPYRIGHT*/
@@ -431,13 +466,13 @@ section#copyright .container {
     padding-top: 35px;
     padding-bottom: 35px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 section#copyright .social-icons {
-    margin-left: auto;
+    margin-top:20px;
 }
 
 section#copyright .social-icons i{
@@ -450,6 +485,23 @@ section#copyright .social-icons i{
 section#copyright .social-icons i:hover {
     color: #C1B283;
     transition: 0.3s;
+}
+
+@media only screen and (min-width: 576px) { 
+    section#copyright .container { 
+        flex-direction: row;
+    }
+    
+    section#copyright .social-icons {
+        margin-top:0;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 577px) {
+    section#copyright .social-icons a:first-child{
+        margin-left: -32px;
+    }
 }
 
 /* BURGER NAV */
